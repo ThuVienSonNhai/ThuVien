@@ -138,5 +138,15 @@ namespace DO_AN
         {
             openForm( new FormDanhSachThuVien());
         }
+
+        private void tacgia_click(object sender, EventArgs e)
+        {
+            openForm(new FormTacGia());
+        }
+
+        private void panelBody_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -133,6 +133,7 @@
             this.panelBody.Size = new System.Drawing.Size(782, 736);
             this.panelBody.TabIndex = 1;
             this.panelBody.Click += new System.EventHandler(this.danhsachthuvien_click);
+            this.panelBody.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBody_Paint);
             // 
             // panel1
             // 
@@ -568,6 +569,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 30);
             this.tableLayoutPanel6.TabIndex = 5;
+            this.tableLayoutPanel6.Click += new System.EventHandler(this.tacgia_click);
             // 
             // label6
             // 
@@ -579,6 +581,7 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Quản lý tác giả";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.tacgia_click);
             // 
             // panel10
             // 

@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL_CRUD.cs" />
     <EmbeddedResource Include="FormTacGia.resx">
       <DependentUpon>FormTacGia.cs</DependentUpon>
     </EmbeddedResource>
