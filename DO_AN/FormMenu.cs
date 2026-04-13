@@ -17,105 +17,98 @@ namespace DO_AN
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void tableLayoutPanel1_Click(object sender, EventArgs e)
         {
-            if(panelHeThong1.Visible == false)
+            if(paneldn.Visible == false)
             {
-                panelHeThong1.Visible = true;
-                panelHeThong2.Visible = true;
-                panelHeThong3.Visible = true;
+                paneldn.Visible = true;
+                paneldx.Visible = true;
+                panelmk.Visible = true;
 
             }
             else
             {
-                panelHeThong1.Visible = false;
-                panelHeThong2.Visible = false;
-                panelHeThong3.Visible = false;
+                paneldn.Visible = false;
+                paneldx.Visible = false;
+                panelmk.Visible = false;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            panelHeThong1.      Visible = false;
-            panelHeThong2.      Visible = false;
-            panelHeThong3.      Visible = false;
-            panel10.            Visible = false;
-            panel9.             Visible = false;
-            panel8.             Visible = false;
-            panel4.             Visible = false;
-            panel6.             Visible = false;
-            panel11.            Visible = false;
-            panel12.            Visible = false;
-            panel13.            Visible = false;
-            panel15.            Visible = false;
-            panel16.            Visible = false;
-            panelHeThong1.BackColor = Color.LightGray;
-            panelHeThong2.BackColor = Color.LightGray;
-            panelHeThong3.BackColor = Color.LightGray;
-            panel10.BackColor = Color.      LightGray;
-            panel9.BackColor = Color.       LightGray;
-            panel8.BackColor = Color.       LightGray;
-            panel4.BackColor = Color.       LightGray;
-            panel6.BackColor = Color.       LightGray;
-            panel11.BackColor = Color.      LightGray;
-            panel12.BackColor = Color.      LightGray;
-            panel13.BackColor = Color.      LightGray;
-            panel15.BackColor = Color.      LightGray;
-            panel16.BackColor = Color.      LightGray;
+            paneldn.      Visible = false;
+            paneldx.      Visible = false;
+            panelmk.      Visible = false;
+            panelthuvien.            Visible = false;
+            paneltacgia.             Visible = false;
+            paneltheloai.             Visible = false;
+            panelnxb.             Visible = false;
+            panelkhachhang.             Visible = false;
+            panelbansao.            Visible = false;
+            panelphieumuon.            Visible = false;
+            panelctmuon.Visible = false;
+            paneltksach.            Visible = false;
+            panelkesach.Visible = false;
+            panelnhanvien.Visible = false;
+            paneltkdocgia.Visible = false;
+            paneltkmuon.Visible = false;
+            paneldn.BackColor = Color.LightGray;
+            paneldx.BackColor = Color.LightGray;
+            panelmk.BackColor = Color.LightGray;
+            panelthuvien.BackColor = Color.      LightGray;
+            paneltacgia.BackColor = Color.       LightGray;
+            paneltheloai.BackColor = Color.       LightGray;
+            panelnxb.BackColor = Color.       LightGray;
+            panelkhachhang.BackColor = Color.       LightGray;
+            panelbansao.BackColor = Color.      LightGray;
+            panelchomuon.BackColor = Color.      LightGray;
+            panelphieumuon.BackColor = Color.      LightGray;
+            panelthongke.BackColor = Color.      LightGray;
+            paneltksach.BackColor = Color.      LightGray;
+            panelctmuon.BackColor = Color.LightGray;
+            panelkesach.BackColor = Color.LightGray;
+            panelnhanvien.BackColor = Color.LightGray;
+            paneltkdocgia.BackColor = Color.LightGray;
+            paneltkmuon.BackColor = Color.LightGray;
         }
 
         private void tableLayoutPanel3_Click(object sender, EventArgs e)
         {
-            if(panel10.Visible == false)
+            if(paneltacgia.Visible == false)
             {
-                panel10.Visible = true;
-                panel9.Visible = true;
-                panel8.Visible = true;
-                panel4.Visible = true;
+                paneltacgia.Visible = true;
+                paneltheloai.Visible = true;
+                panelnxb.Visible = true;
+                panelnhanvien.Visible = true;
+                panelkesach.Visible = true;
+                panelkhachhang.Visible = true;
             }
             else
             {
-                panel10.Visible = false;
-                panel9.Visible = false;
-                panel8.Visible = false;
-                panel4.Visible = false;
+                paneltacgia.Visible = false;
+                paneltheloai.Visible = false;
+                panelnxb.Visible = false;
+                panelnhanvien.Visible = false;
+                panelkesach.Visible = false;
+                panelkhachhang.Visible = false;
             }
         }
 
         private void quanlychothue_click(object sender, EventArgs e)
         {
-            if (panel6.Visible == false)
+            if (panelkhachhang.Visible == false)
             {
-                panel6.Visible = true;
-                panel11.Visible = true;
-                panel12.Visible = true;
-                panel13.Visible = true;
+                panelkhachhang.Visible = true;
+                panelbansao.Visible = true;
+                panelchomuon.Visible = true;
+                panelphieumuon.Visible = true;
             }
             else
             {
-                panel6.Visible = false;
-                panel11.Visible = false;
-                panel12.Visible = false;
-                panel13.Visible = false;
-            }
-        }
-
-        private void timkiem_click(object sender, EventArgs e)
-        {
-            if(panel16.Visible == false)
-            {
-                panel16.Visible = true;
-                panel15.Visible = true;
-            }
-            else
-            {
-                panel15.Visible = false;
-                panel16.Visible = false;
+                panelkhachhang.Visible = false;
+                panelbansao.Visible = false;
+                panelchomuon.Visible = false;
+                panelphieumuon.Visible = false;
             }
         }
 
@@ -144,9 +137,48 @@ namespace DO_AN
             openForm(new FormTacGia());
         }
 
-        private void panelBody_Paint(object sender, PaintEventArgs e)
+        private void quanlysach_click(object sender, EventArgs e)
         {
+            if(panelthuvien.Visible == false)
+            {
+                panelthuvien.Visible = true;
+                panelbansao.Visible = true;
+            }
+            else
+            {
+                panelthuvien.Visible = false;
+                panelbansao.Visible = false;
+            }
+        }
 
+        private void quanlychomuon_click(object sender, EventArgs e)
+        {
+            if(panelphieumuon.Visible == false)
+            {
+                panelphieumuon.Visible = true;
+                panelctmuon.Visible = true;
+            }
+            else
+            {
+                panelphieumuon.Visible = false;
+                panelctmuon.Visible = false;
+            }
+        }
+
+        private void thongke_click(object sender, EventArgs e)
+        {
+            if (paneltksach.Visible == false)
+            {
+                paneltksach.Visible = true;
+                paneltkdocgia.Visible = true;
+                paneltkmuon.Visible = true;
+            }
+            else
+            {
+                paneltksach.Visible = false;
+                paneltkdocgia.Visible = false;
+                paneltkmuon.Visible = false;
+            }
         }
     }
 }

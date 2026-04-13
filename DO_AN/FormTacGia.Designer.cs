@@ -360,7 +360,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTacGia";
             this.Text = "FormDanhSachThuVien";
-            this.Load += new System.EventHandler(this.FormTacGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ThongTinBook.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
