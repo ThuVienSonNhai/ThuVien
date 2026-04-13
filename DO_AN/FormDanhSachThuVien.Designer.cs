@@ -57,11 +57,11 @@
             this.comboBoxTheLoai = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonHuy = new System.Windows.Forms.Button();
+            this.buttonLuu = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.ThongTinBook.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -169,7 +169,7 @@
             this.comboBoxNgonNgu.Location = new System.Drawing.Point(120, 243);
             this.comboBoxNgonNgu.Name = "comboBoxNgonNgu";
             this.comboBoxNgonNgu.Size = new System.Drawing.Size(112, 24);
-            this.comboBoxNgonNgu.TabIndex = 17;
+            this.comboBoxNgonNgu.TabIndex = 7;
             // 
             // textBoxViTri
             // 
@@ -177,7 +177,7 @@
             this.textBoxViTri.Location = new System.Drawing.Point(120, 349);
             this.textBoxViTri.Name = "textBoxViTri";
             this.textBoxViTri.Size = new System.Drawing.Size(112, 22);
-            this.textBoxViTri.TabIndex = 15;
+            this.textBoxViTri.TabIndex = 10;
             // 
             // textBoxGia
             // 
@@ -185,7 +185,7 @@
             this.textBoxGia.Location = new System.Drawing.Point(120, 312);
             this.textBoxGia.Name = "textBoxGia";
             this.textBoxGia.Size = new System.Drawing.Size(112, 22);
-            this.textBoxGia.TabIndex = 14;
+            this.textBoxGia.TabIndex = 9;
             // 
             // textBoxSLTrang
             // 
@@ -193,7 +193,7 @@
             this.textBoxSLTrang.Location = new System.Drawing.Point(120, 278);
             this.textBoxSLTrang.Name = "textBoxSLTrang";
             this.textBoxSLTrang.Size = new System.Drawing.Size(112, 22);
-            this.textBoxSLTrang.TabIndex = 13;
+            this.textBoxSLTrang.TabIndex = 8;
             // 
             // textBoxISBN
             // 
@@ -201,7 +201,7 @@
             this.textBoxISBN.Location = new System.Drawing.Point(120, 210);
             this.textBoxISBN.Name = "textBoxISBN";
             this.textBoxISBN.Size = new System.Drawing.Size(112, 22);
-            this.textBoxISBN.TabIndex = 11;
+            this.textBoxISBN.TabIndex = 6;
             // 
             // textBoxYearXB
             // 
@@ -209,7 +209,7 @@
             this.textBoxYearXB.Location = new System.Drawing.Point(120, 176);
             this.textBoxYearXB.Name = "textBoxYearXB";
             this.textBoxYearXB.Size = new System.Drawing.Size(112, 22);
-            this.textBoxYearXB.TabIndex = 10;
+            this.textBoxYearXB.TabIndex = 5;
             // 
             // textBoxNXB
             // 
@@ -217,7 +217,7 @@
             this.textBoxNXB.Location = new System.Drawing.Point(120, 142);
             this.textBoxNXB.Name = "textBoxNXB";
             this.textBoxNXB.Size = new System.Drawing.Size(112, 22);
-            this.textBoxNXB.TabIndex = 9;
+            this.textBoxNXB.TabIndex = 4;
             // 
             // textBoxNameTacGia
             // 
@@ -225,7 +225,7 @@
             this.textBoxNameTacGia.Location = new System.Drawing.Point(120, 74);
             this.textBoxNameTacGia.Name = "textBoxNameTacGia";
             this.textBoxNameTacGia.Size = new System.Drawing.Size(112, 22);
-            this.textBoxNameTacGia.TabIndex = 7;
+            this.textBoxNameTacGia.TabIndex = 2;
             // 
             // textBoxNameSach
             // 
@@ -233,7 +233,7 @@
             this.textBoxNameSach.Location = new System.Drawing.Point(120, 40);
             this.textBoxNameSach.Name = "textBoxNameSach";
             this.textBoxNameSach.Size = new System.Drawing.Size(112, 22);
-            this.textBoxNameSach.TabIndex = 6;
+            this.textBoxNameSach.TabIndex = 1;
             // 
             // label1
             // 
@@ -345,7 +345,7 @@
             this.textBoxIDBook.Location = new System.Drawing.Point(120, 6);
             this.textBoxIDBook.Name = "textBoxIDBook";
             this.textBoxIDBook.Size = new System.Drawing.Size(112, 22);
-            this.textBoxIDBook.TabIndex = 5;
+            this.textBoxIDBook.TabIndex = 0;
             // 
             // comboBoxTheLoai
             // 
@@ -354,7 +354,7 @@
             this.comboBoxTheLoai.Location = new System.Drawing.Point(120, 107);
             this.comboBoxTheLoai.Name = "comboBoxTheLoai";
             this.comboBoxTheLoai.Size = new System.Drawing.Size(112, 24);
-            this.comboBoxTheLoai.TabIndex = 16;
+            this.comboBoxTheLoai.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -376,11 +376,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonXoa, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonHuy, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonLuu, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSua, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonThem, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -389,55 +389,60 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(656, 43);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button5
+            // buttonXoa
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(527, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 37);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Xóa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonXoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonXoa.Location = new System.Drawing.Point(527, 3);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(126, 37);
+            this.buttonXoa.TabIndex = 4;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
-            // button4
+            // buttonHuy
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(396, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 37);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Hủy";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonHuy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonHuy.Location = new System.Drawing.Point(396, 3);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(125, 37);
+            this.buttonHuy.TabIndex = 3;
+            this.buttonHuy.Text = "Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = true;
+            this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
-            // button3
+            // buttonLuu
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(265, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Lưu";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonLuu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuu.Location = new System.Drawing.Point(265, 3);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(125, 37);
+            this.buttonLuu.TabIndex = 2;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = true;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
             // 
-            // button2
+            // buttonSua
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(134, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSua.Location = new System.Drawing.Point(134, 3);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(125, 37);
+            this.buttonSua.TabIndex = 1;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
-            // button1
+            // buttonThem
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonThem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonThem.Location = new System.Drawing.Point(3, 3);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(125, 37);
+            this.buttonThem.TabIndex = 0;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // FormDanhSachThuVien
             // 
@@ -469,11 +474,11 @@
         private System.Windows.Forms.GroupBox ThongTinBook;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.Button buttonLuu;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
