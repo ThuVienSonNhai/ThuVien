@@ -18,5 +18,10 @@ namespace DO_AN
         }
 
         SQL_CRUD sql = new SQL_CRUD();
+
+        private void FormKhachHang_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = sql.GetData("SELECT * FROM tblKachHang");
+        }
     }
 }

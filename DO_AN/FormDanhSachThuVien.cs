@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Configuration;
+
 
 namespace DO_AN
 {
@@ -17,14 +20,18 @@ namespace DO_AN
         {
             InitializeComponent();
         }
-        SQL_CRUD sql = new SQL_CRUD();
+        sql_crud data_sql = new sql_crud();
+
 
         bool data_click = true;
         bool them_click = false;
         bool sua_click = false;
         private void FormDanhSachThuVien_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
+            var data = from u in data_sql.Book select u;
+
+            dataGridView1.DataSource = data.ToList();
+            
             textBoxIDBook.Enabled = false;
             textBoxNameSach.Enabled = false;
             textBoxNameTacGia.Enabled = false;
@@ -70,7 +77,6 @@ namespace DO_AN
             }
 
         }
-        tblBookDAO book = new tblBookDAO();
         private void buttonThem_Click(object sender, EventArgs e)
         {
             textBoxNameSach.Enabled = true;
@@ -110,57 +116,57 @@ namespace DO_AN
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            int idbook = int.Parse(textBoxIDBook.Text);
-            string sach = textBoxNameSach.Text, isbn = textBoxISBN.Text, ngonngu = comboBoxNgonNgu.Text, mota = textBoxMoTa.Text;
-            int idtac = int.Parse(textBoxNameTacGia.Text), idthe = int.Parse(comboBoxTheLoai.Text), idnhaxb = int.Parse(textBoxNXB.Text), namxb = int.Parse(textBoxYearXB.Text), sotrang = int.Parse(textBoxSLTrang.Text), idkesach = int.Parse(textBoxViTri.Text);
-            decimal gia = decimal.Parse(textBoxGia.Text);
-            if (them_click == true)
-            {
-                bool kiem = book.them(sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
-                if (kiem == true)
-                {
-                    MessageBox.Show("Thêm thành công");
-                    dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-                }
-                else
-                {
-                    MessageBox.Show("Thêm thất bại");
-                }
-            }
-            if(sua_click == true)
-            {
-                bool kiem = book.sua(idbook, sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
-                if (kiem == true)
-                {
-                    MessageBox.Show("Sửa thành công");
-                    dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thất bại");
-                }
-            }
-            textBoxIDBook.Enabled = false;
-            textBoxNameSach.Enabled = false;
-            textBoxNameTacGia.Enabled = false;
-            comboBoxTheLoai.Enabled = false;
-            textBoxNXB.Enabled = false;
-            textBoxYearXB.Enabled = false;
-            textBoxISBN.Enabled = false;
-            comboBoxNgonNgu.Enabled = false;
-            textBoxSLTrang.Enabled = false;
-            textBoxGia.Enabled = false;
-            textBoxMoTa.Enabled = false;
-            textBoxViTri.Enabled = false;
-            //button
-            buttonSua.Enabled = true;
-            buttonXoa.Enabled = false;
-            buttonThem.Enabled = true;
-            buttonLuu.Enabled = false;
-            buttonHuy.Enabled = false;
+            //int idbook = int.Parse(textBoxIDBook.Text);
+            //string sach = textBoxNameSach.Text, isbn = textBoxISBN.Text, ngonngu = comboBoxNgonNgu.Text, mota = textBoxMoTa.Text;
+            //int idtac = int.Parse(textBoxNameTacGia.Text), idthe = int.Parse(comboBoxTheLoai.Text), idnhaxb = int.Parse(textBoxNXB.Text), namxb = int.Parse(textBoxYearXB.Text), sotrang = int.Parse(textBoxSLTrang.Text), idkesach = int.Parse(textBoxViTri.Text);
+            //decimal gia = decimal.Parse(textBoxGia.Text);
+            //if (them_click == true)
+            //{
+            //    bool kiem = book.them(sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
+            //    if (kiem == true)
+            //    {
+            //        MessageBox.Show("Thêm thành công");
+            //        dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Thêm thất bại");
+            //    }
+            //}
+            //if(sua_click == true)
+            //{
+            //    bool kiem = book.sua(idbook, sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
+            //    if (kiem == true)
+            //    {
+            //        MessageBox.Show("Sửa thành công");
+            //        dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Sửa thất bại");
+            //    }
+            //}
+            //textBoxIDBook.Enabled = false;
+            //textBoxNameSach.Enabled = false;
+            //textBoxNameTacGia.Enabled = false;
+            //comboBoxTheLoai.Enabled = false;
+            //textBoxNXB.Enabled = false;
+            //textBoxYearXB.Enabled = false;
+            //textBoxISBN.Enabled = false;
+            //comboBoxNgonNgu.Enabled = false;
+            //textBoxSLTrang.Enabled = false;
+            //textBoxGia.Enabled = false;
+            //textBoxMoTa.Enabled = false;
+            //textBoxViTri.Enabled = false;
+            ////button
+            //buttonSua.Enabled = true;
+            //buttonXoa.Enabled = false;
+            //buttonThem.Enabled = true;
+            //buttonLuu.Enabled = false;
+            //buttonHuy.Enabled = false;
 
-            them_click = false;
-            sua_click = false;
+            //them_click = false;
+            //sua_click = false;
         }
 
         private void buttonHuy_Click(object sender, EventArgs e)
@@ -189,23 +195,23 @@ namespace DO_AN
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            string NameSach = textBoxNameSach.Text;
-            int IDSach = int.Parse(textBoxIDBook.Text);
-            MessageBox.Show("Xác nhận xóa", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            book.xoa(IDSach);
-            dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-            textBoxIDBook.Text = "";
-            textBoxNameSach.Text = "";
-            textBoxNameTacGia.Text = "";
-            comboBoxTheLoai.Text = "";
-            textBoxNXB.Text = "";
-            textBoxYearXB.Text = "";
-            textBoxISBN.Text = "";
-            comboBoxNgonNgu.Text = "";
-            textBoxSLTrang.Text = "";
-            textBoxGia.Text = "";
-            textBoxMoTa.Text = "";
-            textBoxViTri.Text = "";
+            //string NameSach = textBoxNameSach.Text;
+            //int IDSach = int.Parse(textBoxIDBook.Text);
+            //MessageBox.Show("Xác nhận xóa", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //book.xoa(IDSach);
+            //dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
+            //textBoxIDBook.Text = "";
+            //textBoxNameSach.Text = "";
+            //textBoxNameTacGia.Text = "";
+            //comboBoxTheLoai.Text = "";
+            //textBoxNXB.Text = "";
+            //textBoxYearXB.Text = "";
+            //textBoxISBN.Text = "";
+            //comboBoxNgonNgu.Text = "";
+            //textBoxSLTrang.Text = "";
+            //textBoxGia.Text = "";
+            //textBoxMoTa.Text = "";
+            //textBoxViTri.Text = "";
         }
 
         private void buttonSua_Click(object sender, EventArgs e)

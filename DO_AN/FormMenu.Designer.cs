@@ -497,6 +497,7 @@
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel13.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel13.TabIndex = 11;
+            this.tableLayoutPanel13.Click += new System.EventHandler(this.formBanSao_click);
             // 
             // label13
             // 
@@ -508,6 +509,7 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Bản Sao";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.formBanSao_click);
             // 
             // panelthuvien
             // 
@@ -606,6 +608,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel12.TabIndex = 11;
+            this.tableLayoutPanel12.Click += new System.EventHandler(this.formkhachHang_click);
             // 
             // label12
             // 
@@ -617,6 +620,7 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Khách Hàng";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Click += new System.EventHandler(this.formkhachHang_click);
             // 
             // panelnhanvien
             // 
@@ -641,6 +645,7 @@
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel11.TabIndex = 11;
+            this.tableLayoutPanel11.Click += new System.EventHandler(this.formNhanvien_click);
             // 
             // label11
             // 
@@ -652,6 +657,7 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Nhân Viên";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.formNhanvien_click);
             // 
             // panelkesach
             // 
@@ -676,6 +682,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel9.TabIndex = 11;
+            this.tableLayoutPanel9.Click += new System.EventHandler(this.formKesach_click);
             // 
             // label9
             // 
@@ -687,6 +694,7 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Kệ Sách";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.formKesach_click);
             // 
             // panelnxb
             // 
@@ -711,6 +719,7 @@
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel14.TabIndex = 11;
+            this.tableLayoutPanel14.Click += new System.EventHandler(this.formNXB_click);
             // 
             // label14
             // 
@@ -722,6 +731,7 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Quản lý nhà xuất bản";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Click += new System.EventHandler(this.formNXB_click);
             // 
             // paneltheloai
             // 
@@ -745,6 +755,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(179, 30);
             this.tableLayoutPanel8.TabIndex = 7;
+            this.tableLayoutPanel8.Click += new System.EventHandler(this.formTheloai_click);
             // 
             // label8
             // 
@@ -756,6 +767,7 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Quản lý thể loại";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.formTheloai_click);
             // 
             // paneltacgia
             // 

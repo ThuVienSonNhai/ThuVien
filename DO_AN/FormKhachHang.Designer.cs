@@ -30,14 +30,9 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ThongTinBook = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonHuy = new System.Windows.Forms.Button();
-            this.buttonLuu = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonThem = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -54,13 +49,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonHuy = new System.Windows.Forms.Button();
+            this.buttonLuu = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.ThongTinBook.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -87,89 +87,6 @@
             this.ThongTinBook.TabIndex = 1;
             this.ThongTinBook.TabStop = false;
             this.ThongTinBook.Text = "Thông tin thư viện";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Location = new System.Drawing.Point(265, 491);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(662, 64);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức Năng";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.buttonXoa, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonHuy, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonLuu, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSua, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonThem, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(656, 43);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // buttonXoa
-            // 
-            this.buttonXoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonXoa.Location = new System.Drawing.Point(527, 3);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(126, 37);
-            this.buttonXoa.TabIndex = 4;
-            this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            // 
-            // buttonHuy
-            // 
-            this.buttonHuy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonHuy.Location = new System.Drawing.Point(396, 3);
-            this.buttonHuy.Name = "buttonHuy";
-            this.buttonHuy.Size = new System.Drawing.Size(125, 37);
-            this.buttonHuy.TabIndex = 3;
-            this.buttonHuy.Text = "Hủy";
-            this.buttonHuy.UseVisualStyleBackColor = true;
-            // 
-            // buttonLuu
-            // 
-            this.buttonLuu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonLuu.Location = new System.Drawing.Point(265, 3);
-            this.buttonLuu.Name = "buttonLuu";
-            this.buttonLuu.Size = new System.Drawing.Size(125, 37);
-            this.buttonLuu.TabIndex = 2;
-            this.buttonLuu.Text = "Lưu";
-            this.buttonLuu.UseVisualStyleBackColor = true;
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSua.Location = new System.Drawing.Point(134, 3);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(125, 37);
-            this.buttonSua.TabIndex = 1;
-            this.buttonSua.Text = "Sửa";
-            this.buttonSua.UseVisualStyleBackColor = true;
-            // 
-            // buttonThem
-            // 
-            this.buttonThem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonThem.Location = new System.Drawing.Point(3, 3);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(125, 37);
-            this.buttonThem.TabIndex = 0;
-            this.buttonThem.Text = "Thêm";
-            this.buttonThem.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -208,6 +125,24 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(235, 288);
             this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox9.Location = new System.Drawing.Point(120, 261);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(112, 22);
+            this.textBox9.TabIndex = 22;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 264);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 16);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Ngày hết hạn thẻ";
             // 
             // textBox8
             // 
@@ -353,23 +288,88 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Email";
             // 
-            // label9
+            // groupBox2
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 264);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 16);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Ngày hết hạn thẻ";
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Location = new System.Drawing.Point(265, 491);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(662, 64);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức Năng";
             // 
-            // textBox9
+            // tableLayoutPanel1
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(120, 261);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(112, 22);
-            this.textBox9.TabIndex = 22;
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.buttonXoa, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonHuy, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonLuu, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSua, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonThem, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(656, 43);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonXoa.Location = new System.Drawing.Point(527, 3);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(126, 37);
+            this.buttonXoa.TabIndex = 4;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            // 
+            // buttonHuy
+            // 
+            this.buttonHuy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonHuy.Location = new System.Drawing.Point(396, 3);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(125, 37);
+            this.buttonHuy.TabIndex = 3;
+            this.buttonHuy.Text = "Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = true;
+            // 
+            // buttonLuu
+            // 
+            this.buttonLuu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonLuu.Location = new System.Drawing.Point(265, 3);
+            this.buttonLuu.Name = "buttonLuu";
+            this.buttonLuu.Size = new System.Drawing.Size(125, 37);
+            this.buttonLuu.TabIndex = 2;
+            this.buttonLuu.Text = "Lưu";
+            this.buttonLuu.UseVisualStyleBackColor = true;
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSua.Location = new System.Drawing.Point(134, 3);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(125, 37);
+            this.buttonSua.TabIndex = 1;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = true;
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonThem.Location = new System.Drawing.Point(3, 3);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(125, 37);
+            this.buttonThem.TabIndex = 0;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
             // 
             // FormKhachHang
             // 
@@ -382,12 +382,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormKhachHang";
             this.Text = "FormDanhSachThuVien";
+            this.Load += new System.EventHandler(this.FormKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ThongTinBook.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

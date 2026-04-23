@@ -180,5 +180,35 @@ namespace DO_AN
                 paneltkmuon.Visible = false;
             }
         }
+
+        private void formKesach_click(object sender, EventArgs e)
+        {
+            openForm(new FormKeSach());
+        }
+
+        private void formNhanvien_click(object sender, EventArgs e)
+        {
+            openForm(new FormNV());
+        }
+
+        private void formNXB_click(object sender, EventArgs e)
+        {
+            openForm(new FormNhaXB());
+        }
+
+        private void formTheloai_click(object sender, EventArgs e)
+        {
+            openForm(new FormTheLoai());
+        }
+
+        private void formkhachHang_click(object sender, EventArgs e)
+        {
+            openForm(new FormKhachHang());
+        }
+
+        private void formBanSao_click(object sender, EventArgs e)
+        {
+            openForm(new FormBanSao());
+        }
     }
 }
