@@ -17,6 +17,6 @@ namespace DO_AN
             InitializeComponent();
         }
 
-        SQL_CRUD sql = new SQL_CRUD();
+        dbData sql = new dbData();
     }
 }

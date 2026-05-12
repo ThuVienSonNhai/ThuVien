@@ -17,11 +17,16 @@ namespace DO_AN
             InitializeComponent();
         }
 
-        SQL_CRUD sql = new SQL_CRUD();
-
+        dbData db = new dbData();
+        void loadData()
+        {
+            var data = from u in db.TacGia
+                       select u;
+            dataGridView1.DataSource = data.ToList();
+        }
         private void FormTacGia_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = sql.GetData("SELECT * FROM tblTacGia");
+            loadData();
         }
     }
 }
