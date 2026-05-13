@@ -26,27 +26,38 @@ namespace DO_AN
         bool data_click = true;
         bool them_click = false;
         bool sua_click = false;
-        private void FormDanhSachThuVien_Load(object sender, EventArgs e)
+        void setbutton(bool check)
+        {
+            textBoxIDBook.Enabled = check;
+            textBoxNameSach.Enabled = check;
+            textBoxNameTacGia.Enabled = check;
+            comboBoxTheLoai.Enabled = check;
+            textBoxNXB.Enabled = check;
+            textBoxYearXB.Enabled = check;
+            textBoxISBN.Enabled = check;
+            comboBoxNgonNgu.Enabled = check;
+            textBoxSLTrang.Enabled = check;
+            textBoxGia.Enabled = check;
+            textBoxMoTa.Enabled = check;
+            textBoxViTri.Enabled = check;
+
+            buttonLuu.Enabled = check;
+            buttonHuy.Enabled = check;
+            buttonXoa.Enabled = check;
+            buttonSua.Enabled = !check;
+            buttonThem.Enabled = !check;
+        }
+        void loadData()
         {
             var data = from u in data_sql.Book select u;
 
             dataGridView1.DataSource = data.ToList();
-            
-            textBoxIDBook.Enabled = false;
-            textBoxNameSach.Enabled = false;
-            textBoxNameTacGia.Enabled = false;
-            comboBoxTheLoai.Enabled = false;
-            textBoxNXB.Enabled = false;
-            textBoxYearXB.Enabled = false;
-            textBoxISBN.Enabled = false;
-            comboBoxNgonNgu.Enabled = false;
-            textBoxSLTrang.Enabled = false;
-            textBoxGia.Enabled = false;
-            textBoxMoTa.Enabled = false;
-            textBoxViTri.Enabled = false;
-            buttonLuu.Enabled = false;
-            buttonHuy.Enabled = false;
-            buttonXoa.Enabled = false;
+        }
+        private void FormDanhSachThuVien_Load(object sender, EventArgs e)
+        {
+
+            loadData();
+            setbutton(false);
 
             //=====================
             dataGridView1.AllowUserToResizeColumns = false;
@@ -56,20 +67,21 @@ namespace DO_AN
 
         private void selectdata_cellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(data_click == true){
+            if (data_click == true)
+            {
                 int i = dataGridView1.CurrentRow.Index;
-                textBoxIDBook.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                textBoxNameSach.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                textBoxNameTacGia.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                comboBoxTheLoai.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                textBoxNXB.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
-                textBoxYearXB.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
-                textBoxISBN.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
-                comboBoxNgonNgu.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
-                textBoxSLTrang.Text = dataGridView1.Rows[i].Cells[8].Value.ToString();
-                textBoxGia.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
-                textBoxMoTa.Text = dataGridView1.Rows[i].Cells[10].Value.ToString();
-                textBoxViTri.Text = dataGridView1.Rows[i].Cells[11].Value.ToString();
+                textBoxIDBook.Text = dataGridView1.Rows[i].Cells["IDBook"].Value.ToString();
+                textBoxNameSach.Text = dataGridView1.Rows[i].Cells["NameBook"].Value.ToString();
+                textBoxNameTacGia.Text = dataGridView1.Rows[i].Cells["IDTacGia"].Value.ToString();
+                comboBoxTheLoai.Text = dataGridView1.Rows[i].Cells["IDTheLoai"].Value.ToString();
+                textBoxNXB.Text = dataGridView1.Rows[i].Cells["IDNhaXB"].Value.ToString();
+                textBoxYearXB.Text = dataGridView1.Rows[i].Cells["NamXB"].Value.ToString();
+                textBoxISBN.Text = dataGridView1.Rows[i].Cells["ISBN"].Value.ToString();
+                comboBoxNgonNgu.Text = dataGridView1.Rows[i].Cells["NgonNgu"].Value.ToString();
+                textBoxSLTrang.Text = dataGridView1.Rows[i].Cells["SoTrang"].Value.ToString();
+                textBoxGia.Text = dataGridView1.Rows[i].Cells["Gia"].Value.ToString();
+                textBoxMoTa.Text = dataGridView1.Rows[i].Cells["MoTa"].Value.ToString();
+                textBoxViTri.Text = dataGridView1.Rows[i].Cells["IDKeSach"].Value.ToString();
             }
             else
             {
@@ -79,23 +91,7 @@ namespace DO_AN
         }
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            textBoxNameSach.Enabled = true;
-            textBoxNameTacGia.Enabled = true;
-            comboBoxTheLoai.Enabled = true;
-            textBoxNXB.Enabled = true;
-            textBoxYearXB.Enabled = true;
-            textBoxISBN.Enabled = true;
-            comboBoxNgonNgu.Enabled = true;
-            textBoxSLTrang.Enabled = true;
-            textBoxGia.Enabled = true;
-            textBoxMoTa.Enabled = true;
-            textBoxViTri.Enabled = true;
-            //button
-            buttonSua.Enabled = false;
-            buttonXoa.Enabled = false;
-            buttonThem.Enabled = false;
-            buttonHuy.Enabled = true;
-            buttonLuu.Enabled = true;
+            setbutton(true);
             //text
             textBoxIDBook.Text =         "";
             textBoxNameSach.Text =       "";
@@ -116,123 +112,96 @@ namespace DO_AN
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            //int idbook = int.Parse(textBoxIDBook.Text);
-            //string sach = textBoxNameSach.Text, isbn = textBoxISBN.Text, ngonngu = comboBoxNgonNgu.Text, mota = textBoxMoTa.Text;
-            //int idtac = int.Parse(textBoxNameTacGia.Text), idthe = int.Parse(comboBoxTheLoai.Text), idnhaxb = int.Parse(textBoxNXB.Text), namxb = int.Parse(textBoxYearXB.Text), sotrang = int.Parse(textBoxSLTrang.Text), idkesach = int.Parse(textBoxViTri.Text);
-            //decimal gia = decimal.Parse(textBoxGia.Text);
-            //if (them_click == true)
-            //{
-            //    bool kiem = book.them(sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
-            //    if (kiem == true)
-            //    {
-            //        MessageBox.Show("Thêm thành công");
-            //        dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Thêm thất bại");
-            //    }
-            //}
-            //if(sua_click == true)
-            //{
-            //    bool kiem = book.sua(idbook, sach, idtac, idthe, idnhaxb, namxb, isbn, ngonngu, sotrang, gia, mota, idkesach);
-            //    if (kiem == true)
-            //    {
-            //        MessageBox.Show("Sửa thành công");
-            //        dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Sửa thất bại");
-            //    }
-            //}
-            //textBoxIDBook.Enabled = false;
-            //textBoxNameSach.Enabled = false;
-            //textBoxNameTacGia.Enabled = false;
-            //comboBoxTheLoai.Enabled = false;
-            //textBoxNXB.Enabled = false;
-            //textBoxYearXB.Enabled = false;
-            //textBoxISBN.Enabled = false;
-            //comboBoxNgonNgu.Enabled = false;
-            //textBoxSLTrang.Enabled = false;
-            //textBoxGia.Enabled = false;
-            //textBoxMoTa.Enabled = false;
-            //textBoxViTri.Enabled = false;
-            ////button
-            //buttonSua.Enabled = true;
-            //buttonXoa.Enabled = false;
-            //buttonThem.Enabled = true;
-            //buttonLuu.Enabled = false;
-            //buttonHuy.Enabled = false;
 
-            //them_click = false;
-            //sua_click = false;
+            if (them_click == true)
+            {
+                tblBook newbook = new tblBook
+                {
+                    IDBook = int.TryParse(textBoxIDBook.Text, out int id) ? id : 0,
+                    NameBook = textBoxNameSach.Text.Trim(),
+                    IDTacGia = int.TryParse(textBoxNameTacGia.Text, out int idtg) ? idtg : 0,
+                    IDTheLoai = int.TryParse(comboBoxTheLoai.Text, out int idtl) ? idtl : 0,
+                    IDNhaXB = int.TryParse(textBoxNXB.Text, out int idnxb) ? idnxb : 0,
+                    NamXB = int.TryParse(textBoxYearXB.Text, out int nam) ? nam : DateTime.Now.Year,
+                    ISBN = textBoxISBN.Text.Trim(),
+                    NgonNgu = comboBoxNgonNgu.Text.Trim(),
+                    SoTrang = int.TryParse(textBoxSLTrang.Text, out int pages) ? pages : 0,
+                    Gia = decimal.TryParse(textBoxGia.Text, out decimal gia) ? gia : 0,
+                    MoTa = textBoxMoTa.Text.Trim(),
+                    IDKeSach = int.TryParse(textBoxViTri.Text, out int idks) ? idks : 0
+                };
+                data_sql.Book.Add(newbook);
+                data_sql.SaveChanges();
+                loadData();
+            }
+            if (sua_click == true)
+            {
+                int IDSach = int.Parse(textBoxIDBook.Text);
+                var sua = data_sql.Book.SingleOrDefault(u => u.IDBook == IDSach);
+                if(sua != null)
+                {
+                    sua.NameBook = textBoxNameSach.Text.Trim();
+                    sua.IDTacGia = int.Parse(textBoxNameTacGia.Text.Trim());
+                    sua.IDTheLoai = int.Parse(comboBoxTheLoai.Text.Trim());
+                    sua.IDNhaXB = int.Parse(textBoxNXB.Text.Trim());
+                    sua.NamXB = int.Parse(textBoxYearXB.Text.Trim());
+                    sua.ISBN = textBoxISBN.Text.Trim();
+                    sua.NgonNgu = comboBoxNgonNgu.Text.Trim();
+                    sua.SoTrang = int.Parse(textBoxSLTrang.Text.Trim());
+                    sua.Gia = decimal.Parse(textBoxGia.Text.Trim());
+                    sua.MoTa = textBoxMoTa.Text.Trim();
+                    sua.IDKeSach = int.Parse(textBoxViTri.Text.Trim());
+                    data_sql.SaveChanges();
+
+                    loadData();
+                }
+
+            }
+            setbutton(false);
+
+            them_click = false;
+            sua_click = false;
         }
 
         private void buttonHuy_Click(object sender, EventArgs e)
         {
-            textBoxIDBook.Enabled = false;
-            textBoxNameSach.Enabled = false;
-            textBoxNameTacGia.Enabled = false;
-            comboBoxTheLoai.Enabled = false;
-            textBoxNXB.Enabled = false;
-            textBoxYearXB.Enabled = false;
-            textBoxISBN.Enabled = false;
-            comboBoxNgonNgu.Enabled = false;
-            textBoxSLTrang.Enabled = false;
-            textBoxGia.Enabled = false;
-            textBoxMoTa.Enabled = false;
-            textBoxViTri.Enabled = false;
-            //button
-            buttonSua.Enabled = true;
-            buttonXoa.Enabled = false;
-            buttonThem.Enabled = true;
-            buttonLuu.Enabled = false;
-            buttonHuy.Enabled = false;
+            setbutton(false);
             //data
             data_click = true;
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            //string NameSach = textBoxNameSach.Text;
-            //int IDSach = int.Parse(textBoxIDBook.Text);
-            //MessageBox.Show("Xác nhận xóa", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            //book.xoa(IDSach);
-            //dataGridView1.DataSource = sql.GetData("SELECT * FROM tblBook");
-            //textBoxIDBook.Text = "";
-            //textBoxNameSach.Text = "";
-            //textBoxNameTacGia.Text = "";
-            //comboBoxTheLoai.Text = "";
-            //textBoxNXB.Text = "";
-            //textBoxYearXB.Text = "";
-            //textBoxISBN.Text = "";
-            //comboBoxNgonNgu.Text = "";
-            //textBoxSLTrang.Text = "";
-            //textBoxGia.Text = "";
-            //textBoxMoTa.Text = "";
-            //textBoxViTri.Text = "";
+            string NameSach = textBoxNameSach.Text;
+            int IDSach = int.Parse(textBoxIDBook.Text);
+            var xoa = data_sql.Book.SingleOrDefault(u => u.IDBook == IDSach);
+
+            MessageBox.Show("Xác nhận xóa", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (xoa != null)
+            {
+                data_sql.Book.Remove(xoa);
+                data_sql.SaveChanges();
+                loadData();
+
+            }
+
+            textBoxIDBook.Text = "";
+            textBoxNameSach.Text = "";
+            textBoxNameTacGia.Text = "";
+            comboBoxTheLoai.Text = "";
+            textBoxNXB.Text = "";
+            textBoxYearXB.Text = "";
+            textBoxISBN.Text = "";
+            comboBoxNgonNgu.Text = "";
+            textBoxSLTrang.Text = "";
+            textBoxGia.Text = "";
+            textBoxMoTa.Text = "";
+            textBoxViTri.Text = "";
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            textBoxNameSach.Enabled = true;
-            textBoxNameTacGia.Enabled = true;
-            comboBoxTheLoai.Enabled = true;
-            textBoxNXB.Enabled = true;
-            textBoxYearXB.Enabled = true;
-            textBoxISBN.Enabled = true;
-            comboBoxNgonNgu.Enabled = true;
-            textBoxSLTrang.Enabled = true;
-            textBoxGia.Enabled = true;
-            textBoxMoTa.Enabled = true;
-            textBoxViTri.Enabled = true;
-            //textbox
-            buttonSua.Enabled = false;
-            buttonXoa.Enabled = true;
-            buttonThem.Enabled = false;
-            buttonHuy.Enabled = true;
-            buttonLuu.Enabled = true;
+            setbutton(true);
 
             sua_click = true;
         }

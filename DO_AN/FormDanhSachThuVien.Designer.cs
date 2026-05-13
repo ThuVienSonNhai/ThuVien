@@ -92,7 +92,7 @@
             this.ThongTinBook.Controls.Add(this.tableLayoutPanel2);
             this.ThongTinBook.Location = new System.Drawing.Point(12, 12);
             this.ThongTinBook.Name = "ThongTinBook";
-            this.ThongTinBook.Size = new System.Drawing.Size(247, 543);
+            this.ThongTinBook.Size = new System.Drawing.Size(247, 473);
             this.ThongTinBook.TabIndex = 1;
             this.ThongTinBook.TabStop = false;
             this.ThongTinBook.Text = "Thông tin thư viện";
@@ -102,7 +102,7 @@
             this.groupBox1.Controls.Add(this.textBoxMoTa);
             this.groupBox1.Location = new System.Drawing.Point(6, 408);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 110);
+            this.groupBox1.Size = new System.Drawing.Size(235, 59);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mô Tả";
@@ -115,7 +115,7 @@
             this.textBoxMoTa.Location = new System.Drawing.Point(6, 21);
             this.textBoxMoTa.Multiline = true;
             this.textBoxMoTa.Name = "textBoxMoTa";
-            this.textBoxMoTa.Size = new System.Drawing.Size(223, 83);
+            this.textBoxMoTa.Size = new System.Drawing.Size(223, 32);
             this.textBoxMoTa.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -361,9 +361,9 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Location = new System.Drawing.Point(265, 491);
+            this.groupBox2.Location = new System.Drawing.Point(12, 491);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(662, 64);
+            this.groupBox2.Size = new System.Drawing.Size(915, 64);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức Năng";
@@ -386,15 +386,15 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(656, 43);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(909, 43);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonXoa
             // 
             this.buttonXoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonXoa.Location = new System.Drawing.Point(527, 3);
+            this.buttonXoa.Location = new System.Drawing.Point(727, 3);
             this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(126, 37);
+            this.buttonXoa.Size = new System.Drawing.Size(179, 37);
             this.buttonXoa.TabIndex = 4;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
@@ -403,9 +403,9 @@
             // buttonHuy
             // 
             this.buttonHuy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonHuy.Location = new System.Drawing.Point(396, 3);
+            this.buttonHuy.Location = new System.Drawing.Point(546, 3);
             this.buttonHuy.Name = "buttonHuy";
-            this.buttonHuy.Size = new System.Drawing.Size(125, 37);
+            this.buttonHuy.Size = new System.Drawing.Size(175, 37);
             this.buttonHuy.TabIndex = 3;
             this.buttonHuy.Text = "Hủy";
             this.buttonHuy.UseVisualStyleBackColor = true;
@@ -414,9 +414,9 @@
             // buttonLuu
             // 
             this.buttonLuu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonLuu.Location = new System.Drawing.Point(265, 3);
+            this.buttonLuu.Location = new System.Drawing.Point(365, 3);
             this.buttonLuu.Name = "buttonLuu";
-            this.buttonLuu.Size = new System.Drawing.Size(125, 37);
+            this.buttonLuu.Size = new System.Drawing.Size(175, 37);
             this.buttonLuu.TabIndex = 2;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = true;
@@ -425,9 +425,9 @@
             // buttonSua
             // 
             this.buttonSua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSua.Location = new System.Drawing.Point(134, 3);
+            this.buttonSua.Location = new System.Drawing.Point(184, 3);
             this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(125, 37);
+            this.buttonSua.Size = new System.Drawing.Size(175, 37);
             this.buttonSua.TabIndex = 1;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = true;
@@ -438,7 +438,7 @@
             this.buttonThem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonThem.Location = new System.Drawing.Point(3, 3);
             this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(125, 37);
+            this.buttonThem.Size = new System.Drawing.Size(175, 37);
             this.buttonThem.TabIndex = 0;
             this.buttonThem.Text = "Thêm";
             this.buttonThem.UseVisualStyleBackColor = true;
@@ -452,6 +452,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.ThongTinBook);
             this.Controls.Add(this.dataGridView1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDanhSachThuVien";
             this.Text = "FormDanhSachThuVien";

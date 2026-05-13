@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.2\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,49 +56,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\tblBookDAO.cs" />
-    <Compile Include="DAO\tblTacGiaDAO.cs" />
-    <Compile Include="FormNhaXB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhaXB.Designer.cs">
-      <DependentUpon>FormNhaXB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKeSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKeSach.Designer.cs">
-      <DependentUpon>FormKeSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNV.Designer.cs">
-      <DependentUpon>FormNV.cs</DependentUpon>
-    </Compile>
+    <Compile Include="tblTable\tblBook.cs" />
+    <Compile Include="tblTable\tblKhachHang.cs" />
+    <Compile Include="tblTable\tblTacGia.cs" />
     <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBanSao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBanSao.Designer.cs">
-      <DependentUpon>FormBanSao.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTheLoai.Designer.cs">
       <DependentUpon>FormTheLoai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTest.Designer.cs">
-      <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTacGia.cs">
       <SubType>Form</SubType>
@@ -121,26 +92,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sql_crud.cs" />
-    <EmbeddedResource Include="FormNhaXB.resx">
-      <DependentUpon>FormNhaXB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKeSach.resx">
-      <DependentUpon>FormKeSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNV.resx">
-      <DependentUpon>FormNV.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="tblTable\tblTheLoai.cs" />
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBanSao.resx">
-      <DependentUpon>FormBanSao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormTheLoai.resx">
       <DependentUpon>FormTheLoai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTest.resx">
-      <DependentUpon>FormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTacGia.resx">
       <DependentUpon>FormTacGia.cs</DependentUpon>
@@ -186,8 +143,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.2\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.targets')" />
 </Project>

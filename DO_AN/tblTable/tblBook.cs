@@ -33,12 +33,6 @@ namespace DO_AN.DAO
         [Required] public int IDKeSach { get; set; }
         [Required] public int SoTrang { get; set; }
         [Required]
-        [Column(TypeName = "decimal(10,2)")]
         public decimal Gia { get; set; }
-
-
-
-
-
     }
 }

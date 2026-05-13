@@ -1,4 +1,5 @@
 ﻿using DO_AN.DAO;
+using DO_AN.tblTable;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,6 +15,9 @@ namespace DO_AN
         {
 
         }
-        public DbSet<tblBook> Book { get; set; }
+        public DbSet<tblBook> Book { get; set; }    
+        public DbSet<tblTacGia> TacGia { get; set; }
+        public DbSet<tblKhachHang> KhachHang { get; set; }
+        public DbSet<tblTheLoai> TheLoai { get; set; }
     }
 }
